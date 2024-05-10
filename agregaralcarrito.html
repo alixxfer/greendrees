@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8"/>
+        <title> Agregar al carrito </title>
+        <script src="agregaralcarrito.js"></script>
+        <link rel="stylesheet" href="agregaralcarrito.css">
+    </head>
+    <body> 
+        <section class = "mensaje-producto-agregado">
+            <h1>GREENDREES</h1>
+            <nav>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Hombre</li>
+                    <li>
+                        <u>Mujer</u>
+                    </li>
+                    <li class = "sale">Rebajas</li>
+                    <li> 
+                        <a href="https://github.com/elirebolledo/ppt.git">🗝</a>
+                    </li>
+                </ul>
+            </nav>
+            <u id = "subtitulo">Outfit onfire para mujer</u>
+            <button id="btnVerCarrito" onclick="mostrarCarrito();">🛒</button>
+    
+            <div class = "añadir-al-carrito">
+                    <input type="radio" name="seleccionar-ropa" id="body">
+                    <label class="productos" for="body">
+                        <p>BODY $59.000</p>
+                        <img src="./img.ac/body.jpeg" alt="">
+                    </label>
+
+                    <input type="radio" name="seleccionar-ropa" id="vestido">
+                    <label class="productos" for="vestido">
+                        <p>VESTIDO $93.000</p>
+                        <img src="./img.ac/vestido.jpeg" alt="">
+                    </label>                  
+            
+                    <input type="radio" name="seleccionar-ropa" id="top">
+                    <label class="productos" for="top">
+                        <p>TOP $65.000</p>
+                        <img src="./img.ac/top.jpeg" alt="">
+                    </label>  
+            </div>
+            <div class = "bottones-añadir">
+                <button  class = "botones" onclick="mostrarModal('BODY $59.000');">Añadir al carrito</button>
+                <button  class = "botones" onclick="mostrarModal('VESTIDO $93.000');">Añadir al carrito</button>
+                <button  class = "botones" onclick="mostrarModal('TOP $65.000');">Añadir al carrito</button>
+            </div>
+            <div class = "añadir-al-carrito">
+                <input type="radio" name="seleccionar-ropa" id="camiseta">
+                <label class="productos" for="camiseta">
+                    <p>CAMISETA $65.000</p>
+                    <img src="./img.ac/camiseta.png" alt="">
+                </label>
+            
+                <input type="radio" name="seleccionar-ropa" id="pantalon">
+                <label class="productos" for="pantalon">
+                    <p>PANTALON $179.000</p>
+                    <img src="./img.ac/pantalon.png" alt="">
+                </label>
+        
+                <input type="radio" name="seleccionar-ropa" id="falda">
+                <label class="productos" for="falda">
+                    <p>FALDA $73.000</p>
+                    <img src="./img.ac/falda.png" alt="">
+                </label>  
+            </div>
+            <div class = "bottones-añadir">
+                <button  class = "botones" onclick="mostrarModal('CAMISETA $65.000');">Añadir al carrito</button>
+                <button  class = "botones" onclick="mostrarModal('PANTALON $179.000');">Añadir al carrito</button>
+                <button  class = "botones" onclick="mostrarModal('FALDA $73.000');">Añadir al carrito</button>
+            </div>
+            <div class = "bottones-añadir">
+                <dialog id="modal">
+                    <h2>PRODUCTOS AGREGADOS</h2>
+                    <p id="productos-agregados"></p>
+                    <ul id="lista-productos-agregados"></ul>
+                    <button onclick="cerrarModal();">Volver</button>
+                </dialog>   
+            </div> 
+        </section>
+    </body>
+</html>
